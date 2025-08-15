@@ -1,0 +1,5 @@
+Fri Aug 15 2025 21:49:29 GMT+0530 (India Standard Time) : TypeError: Cannot read properties of null (reading 'length')
+    at userModel.signup (C:\Users\DELL\OneDrive\Desktop\Expense Tracker\backend\model\userModel.js:9:15)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async userServices.signup (C:\Users\DELL\OneDrive\Desktop\Expense Tracker\backend\services\userServices.js:11:21)
+    at async C:\Users\DELL\OneDrive\Desktop\Expense Tracker\backend\routes\router.js:13:22
