@@ -3,7 +3,8 @@ const router= express.Router();
 const userServices=require('../services/userServices')
 const transactionServices=require('../services/transactionServices')
 const User=require('../model/user')
-const transation=require('../model/transaction')
+const transation=require('../model/transaction');
+const Transaction = require('../model/transaction');
 
 // User Signup
 
@@ -24,6 +25,57 @@ router.post('/login',async (req, res, next)=>{
     try{
         const user= await userServices.login(req.body.email,req.body.password);
         res.status(200).json(user);
+    }
+    catch(error){
+        next(error);
+    }
+})
+
+// Add Transaction
+
+router.post('/addTransaction',async (req, res, next)=>{
+    try{
+        const newTransaction=new Transaction(req.body);
+        const transaction1=await transactionServices.addTransaction(newTransaction);
+        res.json(transaction1);
+    }
+    catch(error){
+        next(error);
+    }
+})
+
+// Get All transactions of a User
+
+router.get('/getAllTransactions',async (req, res, next)=>{
+    try{
+        const { userId } =req.body;
+        const transactions=await transactionServices.getAllTransactions(userId);
+        res.json(transactions);
+    }
+    catch(error){
+        next(error);
+    }
+})
+
+// Delete Transation
+
+router.delete('/deleteTransaction', async(req, res, next)=>{
+    try{
+        const deletedTxn= await transactionServices.deleteTransaction(req.body.id);
+        res.json(deletedTxn);
+    }
+    catch(error){
+        next(error);
+    }
+})
+
+//Update Transaction
+
+router.patch('/updateTransaction/:id', async(req, res, next)=>{
+    try{
+        console.log("Update txn");
+        const updatedTxn=await transactionServices.updateTransaction(req.params.id,req.body);
+        res.json(updatedTxn);
     }
     catch(error){
         next(error);

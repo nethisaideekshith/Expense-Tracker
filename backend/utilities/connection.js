@@ -57,6 +57,14 @@ const transactionSchema = new mongoose.Schema({
         type: Number,
          required: true 
     },
+    description: {
+        type: String
+    },  
+    userId:{
+        type:mongoose.Schema.Types.ObjectId,
+        ref:'User',
+        required: true
+    },
     date: { 
         type: Date, 
         required: true,
@@ -100,7 +108,7 @@ db.getUsers= async ()=>{
 
 //Transaction Model
 
-db.getTransaction= async ()=>{
+db.getTransactions= async ()=>{
     const model=await dbConnection.model("Transaction",transactionSchema);
     return model;
 }
