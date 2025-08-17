@@ -31,6 +31,18 @@ router.post('/login',async (req, res, next)=>{
     }
 })
 
+//Update Password
+
+router.patch('/updateProfile',async (req, res, next)=>{
+    try{
+        const profileUpdate= await userServices.updateProfile(req.body.id,req.body.oldPassword,req.body.newPassword);
+        res.json({message: "Profile updated successfully!!"});
+    }
+    catch(error){
+        next(error);
+    }
+})
+
 // Add Transaction
 
 router.post('/addTransaction',async (req, res, next)=>{

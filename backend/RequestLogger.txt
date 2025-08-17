@@ -99,3 +99,17 @@ Sat Aug 16 2025 - PATCH - /updateTransaction/68a065d8f516cfb3d6a2ba06
 Sat Aug 16 2025 - PATCH - /updateTransaction/68a065d8f516cfb3d6a2ba06
 Sat Aug 16 2025 - POST - /updateTransaction/68a065d8f516cfb3d6a2ba06
 Sat Aug 16 2025 - PATCH - /updateTransaction/68a065d8f516cfb3d6a2ba06
+Sat Aug 16 2025 - GET - /set-up-db
+Sat Aug 16 2025 - GET - /updateProfile
+Sat Aug 16 2025 - POST - /updateProfile
+Sat Aug 16 2025 - PATCH - /updateProfile
+Sat Aug 16 2025 - PATCH - /updateProfile
+Sat Aug 16 2025 - PATCH - /updateProfile
+Sat Aug 16 2025 - PATCH - /updateProfile
+Sat Aug 16 2025 - POST - /login
+Sat Aug 16 2025 - POST - /login
+Sat Aug 16 2025 - POST - /signup
+Sat Aug 16 2025 - POST - /signup
+Sat Aug 16 2025 - POST - /signup
+Sat Aug 16 2025 - POST - /signup
+Sat Aug 16 2025 - POST - /signup

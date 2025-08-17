@@ -7,7 +7,7 @@ userModel.signup=async (newUser)=>{
         users=await connection.getUsers();
         x=await users.findOne({email: newUser.email});
         if (x) {
-             let error = new Error("User already exists");
+            let error = new Error("User already exists");
             error.status = 500;
             throw error;
         }
@@ -39,6 +39,36 @@ userModel.login=async (email,password)=>{
         }
 
         return user1;
+    }
+    catch(error){
+        throw error;
+    }
+}
+
+userModel.updateProfile=async (id,oldPassword,newPassword)=>{
+    try{
+        const users=await connection.getUsers();
+        const user1=await users.findById(id);
+        if(!user1){
+            const err = new Error('User not found');
+            err.status = 404;
+            throw err;
+        }
+
+        // Handle password validation and update
+        const isMatch = await bcrypt.compare(oldPassword, user1.password);
+        if (!isMatch) {
+            const error = new Error("Incorrect old password");
+            error.status = 401;
+            throw error;
+        }
+
+        // Update password if new one provided
+        if (newPassword) {
+            user1.password = newPassword;
+        }
+        await user1.save();
+        return { message: "Profile updated successfully" }
     }
     catch(error){
         throw error;

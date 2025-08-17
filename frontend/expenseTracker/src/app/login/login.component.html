@@ -1,0 +1,54 @@
+<div class="container-fluid min-vh-100">
+<div class="row justify-content-center">
+    <div class="col-md-6 col-lg-5">
+      <div class="card shadow-lg border-0 my-5 ">
+        <div class="card-header bg-dark text-white text-center">
+          <h4 class="mb-0">Login</h4>
+        </div>
+        <div class="card-body">
+          <form [formGroup]="loginForm" (ngSubmit)="onLogin()">
+  
+            <!-- Email -->
+            <div class="form-group mb-3">
+              <label for="email" class="form-label">Email</label>
+              <div class="input-group">
+                <span class="input-group-text"><i class="material-icons md-18">email</i></span>
+                <input class="form-control" id="email" formControlName="email" placeholder="you@example.com" />
+              </div>
+              <div class="text-danger small mt-1" *ngIf="loginForm.get('email')?.touched && loginForm.get('email')?.invalid">
+                <div *ngIf="loginForm.get('email')?.errors?.['required']">Email is required.</div>
+              </div>
+            </div>
+  
+            <!-- Password -->
+            <div class="form-group mb-3">
+              <div class="flex">
+              <label for="password" class="form-label">Password</label>
+            </div>
+              <div class="input-group">
+                <span class="input-group-text"><i class="material-icons md-18">lock</i></span>
+                <input class="form-control" id="password" type="password" formControlName="password" placeholder="••••••••" />
+              </div>
+              <!-- <a class="text-decoration-none text-primary a1 mt-2" [routerLink]="['/forgotpassword']">Forgot Password?</a> -->
+              <div class="text-danger small mt-1" *ngIf="loginForm.get('password')?.touched && loginForm.get('password')?.invalid">
+                <div *ngIf="loginForm.get('password')?.errors?.['required']">Password is required.</div>
+              </div>
+            </div>
+  
+            <!-- Login Button -->
+             <div class="text-center">
+            <button class="btn btn-primary" type="submit" [disabled]="loginForm.invalid">
+               Login
+            </button>
+          </div>
+          </form>
+  
+          <!-- Signup -->
+           <div class="a2 flex">
+            <a class="text-decoration-none text-primary a2 mt-3" [routerLink]="['/signup']">No existing account?</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

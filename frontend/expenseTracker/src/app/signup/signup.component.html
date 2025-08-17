@@ -1,0 +1,93 @@
+<div class="container-fluid min-vh-100 ">
+    <div class="row justify-content-center">
+        <div class="col-md-6 col-lg-5">
+            <div class="card shadow-lg border-0 my-5">
+                <div class="card-header bg-dark text-white text-center">
+                    <h4 class="mb-0">Sign Up</h4>
+                </div>
+                <div class="card-body">
+                    <form [formGroup]="signupForm" (ngSubmit)="onRegister()">
+
+                        <!-- Username -->
+                        <div class="form-group mb-3">
+                            <label for="username" class="form-label">Username</label>
+                            <div class="input-group">
+                                <span class="input-group-text"><i class="material-icons md-18">person</i></span>
+                                <input class="form-control" id="username" formControlName="name"
+                                    placeholder="John Doe" />
+                            </div>
+                            <div class="text-danger small mt-1"
+                                *ngIf="signupForm.get('username')?.touched && signupForm.get('username')?.invalid">
+                                <div *ngIf="signupForm.get('username')?.errors?.['required']">Username is required.
+                                </div>
+                                <div *ngIf="signupForm.get('username')?.errors?.['pattern']">Only alphabets and spaces
+                                    allowed.</div>
+                            </div>
+                        </div>
+
+                        <!-- Email -->
+                        <div class="form-group mb-3">
+                            <label for="email" class="form-label">Email</label>
+                            <div class="input-group">
+                                <span class="input-group-text"><i class="material-icons md-18">email</i></span>
+                                <input class="form-control" id="email" type="email" formControlName="email"
+                                    placeholder="you@example.com" />
+                            </div>
+                            <div class="text-danger small mt-1"
+                                *ngIf="signupForm.get('email')?.touched && signupForm.get('email')?.invalid">
+                                <div *ngIf="signupForm.get('email')?.errors?.['required']">Email is required.</div>
+                                <div *ngIf="signupForm.get('email')?.errors?.['email']">Invalid email format.</div>
+                            </div>
+                        </div>
+
+                        <!-- Password -->
+                        <div class="form-group mb-3">
+                            <label for="password" class="form-label">Password</label>
+                            <div class="input-group">
+                                <span class="input-group-text"><i class="material-icons md-18">lock</i></span>
+                                <input class="form-control" id="password" type="password" formControlName="password"
+                                    placeholder="••••••••" />
+                            </div>
+                            <div class="text-danger small mt-1"
+                                *ngIf="signupForm.get('password')?.touched && signupForm.get('password')?.invalid">
+                                <div *ngIf="signupForm.get('password')?.errors?.['required']">Password is required.
+                                </div>
+                                <div *ngIf="signupForm.get('password')?.errors?.['pattern']">
+                                    Password must contain at least one uppercase letter, one lowercase letter, one
+                                    digit, one special character, and be at least 6 characters long.
+                                </div>
+                                <div *ngIf="signupForm.get('password')?.errors?.['minlength']">Minimum 6 characters.
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Profile Picture -->
+                        <div class="form-group mb-4">
+                            <label for="profilePicture" class="form-label">Profile Picture</label>
+                            <div class="input-group">
+                                <span class="input-group-text"><i class="material-icons md-18">image</i></span>
+                                <!-- <input class="form-control" type="file" id="profilePicture"
+                                    (change)="onFileSelected($event)" /> -->
+                            </div>
+                        </div>
+
+                        <!-- Submit Button -->
+                        <!-- <div class="align-items-center">
+            <button class="btn btn-primary w-40 d-flex align-items-center justify-content-center" type="submit" [disabled]="signupForm.invalid">
+               Sign Up
+            </button>
+            </div> -->
+
+
+                        <div class="d-flex justify-content-center mt-3">
+                            <button class="btn btn-primary px-4 py-2" type="submit" [disabled]="signupForm.invalid">
+                                Sign Up
+                            </button>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

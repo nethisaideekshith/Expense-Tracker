@@ -28,4 +28,17 @@ userServices.login=async(email, password)=>{
     }
 }
 
+userServices.updateProfile=async(id, oldPassword, newPassword)=>{
+    try{
+        if(newPassword){
+            validators.validatePassword(newPassword);
+        }
+        const passwordUpdate= await userModel.updateProfile(id,oldPassword,newPassword);
+        return passwordUpdate;
+    }
+    catch(error){
+        throw error;
+    }
+}
+
 module.exports=userServices;

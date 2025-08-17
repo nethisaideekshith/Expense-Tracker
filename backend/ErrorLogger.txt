@@ -1,0 +1,44 @@
+Sat Aug 16 2025 21:40:12 GMT+0530 (India Standard Time) : Error: Incorrect old password
+    at userModel.updateProfile (C:\Users\DELL\OneDrive\Desktop\E Tracker\Expense-Tracker\backend\model\userModel.js:61:27)
+    at async userServices.updateProfile (C:\Users\DELL\OneDrive\Desktop\E Tracker\Expense-Tracker\backend\services\userServices.js:36:31)
+    at async C:\Users\DELL\OneDrive\Desktop\E Tracker\Expense-Tracker\backend\routes\router.js:38:30
+Sat Aug 16 2025 21:40:26 GMT+0530 (India Standard Time) : Error: Incorrect old password
+    at userModel.updateProfile (C:\Users\DELL\OneDrive\Desktop\E Tracker\Expense-Tracker\backend\model\userModel.js:61:27)
+    at async userServices.updateProfile (C:\Users\DELL\OneDrive\Desktop\E Tracker\Expense-Tracker\backend\services\userServices.js:36:31)
+    at async C:\Users\DELL\OneDrive\Desktop\E Tracker\Expense-Tracker\backend\routes\router.js:38:30
+Sat Aug 16 2025 23:43:46 GMT+0530 (India Standard Time) : Error: Invalid Password
+    at userModel.login (C:\Users\DELL\OneDrive\Desktop\E Tracker\Expense-Tracker\backend\model\userModel.js:36:26)
+    at async userServices.login (C:\Users\DELL\OneDrive\Desktop\E Tracker\Expense-Tracker\backend\services\userServices.js:23:22)
+    at async C:\Users\DELL\OneDrive\Desktop\E Tracker\Expense-Tracker\backend\routes\router.js:26:21
+Sat Aug 16 2025 23:44:27 GMT+0530 (India Standard Time) : TypeError: Cannot read properties of undefined (reading 'name')
+    at new User (C:\Users\DELL\OneDrive\Desktop\E Tracker\Expense-Tracker\backend\model\user.js:3:23)
+    at C:\Users\DELL\OneDrive\Desktop\E Tracker\Expense-Tracker\backend\routes\router.js:13:17
+    at Layer.handleRequest (C:\Users\DELL\OneDrive\Desktop\E Tracker\Expense-Tracker\backend\node_modules\router\lib\layer.js:152:17)
+    at next (C:\Users\DELL\OneDrive\Desktop\E Tracker\Expense-Tracker\backend\node_modules\router\lib\route.js:157:13)
+    at Route.dispatch (C:\Users\DELL\OneDrive\Desktop\E Tracker\Expense-Tracker\backend\node_modules\router\lib\route.js:117:3)
+    at handle (C:\Users\DELL\OneDrive\Desktop\E Tracker\Expense-Tracker\backend\node_modules\router\index.js:435:11)
+    at Layer.handleRequest (C:\Users\DELL\OneDrive\Desktop\E Tracker\Expense-Tracker\backend\node_modules\router\lib\layer.js:152:17)
+    at C:\Users\DELL\OneDrive\Desktop\E Tracker\Expense-Tracker\backend\node_modules\router\index.js:295:15
+    at processParams (C:\Users\DELL\OneDrive\Desktop\E Tracker\Expense-Tracker\backend\node_modules\router\index.js:582:12)
+    at next (C:\Users\DELL\OneDrive\Desktop\E Tracker\Expense-Tracker\backend\node_modules\router\index.js:291:5)
+Sat Aug 16 2025 23:44:54 GMT+0530 (India Standard Time) : TypeError: Cannot read properties of undefined (reading 'name')
+    at new User (C:\Users\DELL\OneDrive\Desktop\E Tracker\Expense-Tracker\backend\model\user.js:3:23)
+    at C:\Users\DELL\OneDrive\Desktop\E Tracker\Expense-Tracker\backend\routes\router.js:13:17
+    at Layer.handleRequest (C:\Users\DELL\OneDrive\Desktop\E Tracker\Expense-Tracker\backend\node_modules\router\lib\layer.js:152:17)
+    at next (C:\Users\DELL\OneDrive\Desktop\E Tracker\Expense-Tracker\backend\node_modules\router\lib\route.js:157:13)
+    at Route.dispatch (C:\Users\DELL\OneDrive\Desktop\E Tracker\Expense-Tracker\backend\node_modules\router\lib\route.js:117:3)
+    at handle (C:\Users\DELL\OneDrive\Desktop\E Tracker\Expense-Tracker\backend\node_modules\router\index.js:435:11)
+    at Layer.handleRequest (C:\Users\DELL\OneDrive\Desktop\E Tracker\Expense-Tracker\backend\node_modules\router\lib\layer.js:152:17)
+    at C:\Users\DELL\OneDrive\Desktop\E Tracker\Expense-Tracker\backend\node_modules\router\index.js:295:15
+    at processParams (C:\Users\DELL\OneDrive\Desktop\E Tracker\Expense-Tracker\backend\node_modules\router\index.js:582:12)
+    at next (C:\Users\DELL\OneDrive\Desktop\E Tracker\Expense-Tracker\backend\node_modules\router\index.js:291:5)
+Sat Aug 16 2025 23:49:33 GMT+0530 (India Standard Time) : Error: User already exists
+    at userModel.signup (C:\Users\DELL\OneDrive\Desktop\E Tracker\Expense-Tracker\backend\model\userModel.js:10:25)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async userServices.signup (C:\Users\DELL\OneDrive\Desktop\E Tracker\Expense-Tracker\backend\services\userServices.js:11:21)
+    at async C:\Users\DELL\OneDrive\Desktop\E Tracker\Expense-Tracker\backend\routes\router.js:14:22
+Sat Aug 16 2025 23:49:38 GMT+0530 (India Standard Time) : Error: User already exists
+    at userModel.signup (C:\Users\DELL\OneDrive\Desktop\E Tracker\Expense-Tracker\backend\model\userModel.js:10:25)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async userServices.signup (C:\Users\DELL\OneDrive\Desktop\E Tracker\Expense-Tracker\backend\services\userServices.js:11:21)
+    at async C:\Users\DELL\OneDrive\Desktop\E Tracker\Expense-Tracker\backend\routes\router.js:14:22
